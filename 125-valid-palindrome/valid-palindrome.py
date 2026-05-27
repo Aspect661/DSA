@@ -3,9 +3,7 @@ class Solution:
         
         # dup_s = ("".join([char for char in s if char.isalnum()])).lower()
 
-        dup_s = "".join(filter(str.isalnum, s))
-
-        dup_s = dup_s.lower()
+        dup_s = ("".join(filter(str.isalnum, s))).lower()
 
         if dup_s == dup_s[::-1]:
             return True
