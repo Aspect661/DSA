@@ -3,9 +3,14 @@ class Solution:
 
         dup_s = ("".join(filter(str.isalnum, s))).lower()
 
-        n = len(dup_s)
+        # n = len(dup_s)
 
-        for i in range(0,n//2,1):
-            if dup_s[i] != dup_s[n-1-i]:
-                return False
-        return True
+        # for i in range(0,n//2,1):
+        #     if dup_s[i] != dup_s[n-1-i]:
+        #         return False
+        # return True
+
+        if dup_s == dup_s[::-1]:
+            return True
+        else:
+            return False
