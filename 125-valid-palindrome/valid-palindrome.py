@@ -1,11 +1,11 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        
-        # dup_s = ("".join([char for char in s if char.isalnum()])).lower()
 
         dup_s = ("".join(filter(str.isalnum, s))).lower()
 
-        if dup_s == dup_s[::-1]:
-            return True
-        else: 
-            return False
+        n = len(dup_s)
+
+        for i in range(0,n//2,1):
+            if dup_s[i] != dup_s[n-1-i]:
+                return False
+        return True
